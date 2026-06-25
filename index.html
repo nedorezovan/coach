@@ -7,51 +7,12 @@
     <link rel="preconnect" href="https://unpkg.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="tailwind.css" />
     <link href="fonts/Pragmatica_Book.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
-    <script>
-      // Single design-token source of truth.
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              // Surfaces
-              paper: "#f9f9f6",      // default page background
-              "paper-2": "#f3f3ef",  // alternating section background
-              "paper-3": "#ecece7",  // deepest neutral surface
-              // Ink
-              ink: "#111111",        // primary text, solid buttons
-              "ink-2": "#3c3c3c",    // secondary text
-              "ink-3": "#6e6e6e",    // tertiary / muted meta
-              "ink-4": "#a3a3a0",    // hint / divider-adjacent
-              // Lines
-              rule: "rgba(17,17,17,0.12)",
-              "rule-soft": "rgba(17,17,17,0.06)",
-              // Accent — the single signal color: CTAs, eyebrows, outcome label
-              accent: "#1565d9",
-              "accent-hover": "#0f4cb8",
-              "accent-tint": "#e7ecf3",
-            },
-            fontFamily: {
-              serif: ["Cormorant Garamond", "serif"],
-              sans: ["PragmaticaWebBook", "ui-sans-serif", "system-ui", "sans-serif"],
-            },
-            maxWidth: {
-              shell: "76rem",
-            },
-            borderRadius: {
-              DEFAULT: "0",
-              sm: "2px",
-            },
-          },
-        },
-      };
-    </script>
     <style>
       html { scroll-behavior: smooth; }
       body {
