@@ -1,6 +1,8 @@
 @font-face {
   font-family: "PragmaticaWebBook";
-  src: url("./pragmatica_book.otf") format("opentype");
+  src: url("./Pragmatica_Book.woff2") format("woff2"),
+       url("./Pragmatica_Book.woff")  format("woff"),
+       url("./pragmatica_book.otf")   format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
