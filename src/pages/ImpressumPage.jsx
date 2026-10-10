@@ -14,7 +14,7 @@ const impressumDe = [
 
 const impressumEn = [
   { label: "Name",                       value: "Nadiia Nedorezova" },
-  { label: "Address",                    value: ["Berner Straße 4B", "81476 Munich", "Germany"] },
+  { label: "Address",                    value: ["Berner Straße 4B", "81476 Germany", "Germany"] },
   { label: "Phone",                      value: "+49 162 266 6342" },
   { label: "E-Mail",                     value: "nadiia@nedorezova.coach", href: "mailto:nadiia@nedorezova.coach" },
   { label: "Tax number (Steuernummer)",  value: "145/144/41708" },

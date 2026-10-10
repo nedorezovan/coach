@@ -6,7 +6,7 @@ import { Shell, Eyebrow } from "../components.jsx";
 const experience = [
   { years: "19", label: "HR Experience",          detail: "Across vertical and matrix structures — from startups to large holding companies." },
   { years: "12", label: "Recruitment",            detail: "Deep understanding of job responsibilities, role models, areas of responsibility, and influence across IT, digital, media, advertising, finance, and manufacturing." },
-  { years: "6",  label: "Corporate Training",     detail: "Leadership skills development, as well as managing burnout, chronic anxiety, and fatigue. Certified trainer, Büro Richter." },
+  { years: "6",  label: "Corporate Training",     detail: "More than 1,000 managers trained. Programmes on entering the leadership role, leading through reorganisation, and managing burnout, chronic anxiety and fatigue. Guest trainer for Accenture and NES Fircroft; trainer and course author at LABA. Certified trainer, Büro Richter." },
   { years: "10", label: "Psycholinguistics & NLP", detail: "Applied practice in language, cognition, and behavioural patterns in professional and organizational contexts." },
   { years: "6",  label: "Individual Coaching",    detail: "1:1 practice with a focus on neurobiology and neurophysiology. ICF & EMCC certified, ACC level." },
 ];
@@ -46,7 +46,7 @@ export const AboutPage = () => {
                 <div>
                   <span className="t-micro text-ink-3 block mb-3">Working across</span>
                   <p className="t-body text-ink-2">Europe · UK · CIS</p>
-                  <p className="t-body text-ink-2">Based in Munich</p>
+                  <p className="t-body text-ink-2">Based in Germany</p>
                 </div>
               </div>
             </div>

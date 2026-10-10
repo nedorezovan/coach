@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { ScrollToTop, NavBar, Footer } from "./components.jsx";
 import { HomePage } from "./pages/HomePage.jsx";
+import { CoursesPage } from "./pages/CoursesPage.jsx";
 import { AboutPage } from "./pages/AboutPage.jsx";
 import { ContactPage } from "./pages/ContactPage.jsx";
 import { ImpressumPage } from "./pages/ImpressumPage.jsx";
@@ -14,14 +15,20 @@ export const routes = [
   {
     path: "/",
     Page: HomePage,
-    title: "Nadiia Nedorezova | Leadership Coaching",
-    description: "1:1 leadership coaching in Munich and across Europe for leaders and senior experts who need clarity and sound decisions under pressure.",
+    title: "Nadiia Nedorezova | Leadership Coaching and Training",
+    description: "1:1 leadership coaching and training for managers in Germany and across Europe — for leaders who need clarity and sound decisions under pressure.",
+  },
+  {
+    path: "/courses/",
+    Page: CoursesPage,
+    title: "Courses for Managers | Nadiia Nedorezova",
+    description: "Three training programmes for managers: entering the role; reorganisation, redundancies and project closures; burnout, chronic anxiety and fatigue.",
   },
   {
     path: "/about/",
     Page: AboutPage,
-    title: "About Nadiia Nedorezova | Leadership Coaching",
-    description: "ICF & EMCC certified leadership coach (ACC) with 19 years in HR, recruitment and corporate training. Based in Munich, working across Europe, the UK and the CIS.",
+    title: "About Nadiia Nedorezova | Leadership Coaching and Training",
+    description: "ICF & EMCC certified leadership coach (ACC) with 19 years in HR, recruitment and corporate training. Based in Germany, working across Europe, the UK and the CIS.",
   },
   {
     path: "/contact/",

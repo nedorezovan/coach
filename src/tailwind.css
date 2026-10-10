@@ -86,6 +86,32 @@
     transition: border-color .2s ease, color .2s ease;
   }
   .link-inline:hover { border-color: theme('colors.accent'); color: theme('colors.accent'); }
+
+  /* Courses page */
+  .cr-row { display: grid; grid-template-columns: 1fr; gap: 28px; padding: 40px 0; border-bottom: 1px solid theme('colors.rule'); }
+  @media (min-width: 1024px) { .cr-row { grid-template-columns: 300px 1fr 260px; gap: 48px; align-items: start; } }
+
+  .cr-cover { display: block; width: 100%; padding: 0; border: 0; background: theme('colors.accent'); cursor: pointer; aspect-ratio: 16 / 9; overflow: hidden; }
+  .cr-cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+  .cr-cover:hover img { transform: scale(1.03); }
+
+  .cr-pick {
+    display: grid; grid-template-columns: 2rem 1fr; gap: 12px 24px;
+    width: 100%; padding: 22px 0; text-align: left; cursor: pointer;
+    background: none; border: 0; border-bottom: 1px solid theme('colors.rule');
+  }
+  @media (min-width: 768px) { .cr-pick { grid-template-columns: 2rem 1fr 280px; align-items: baseline; } }
+
+  .cr-cover:focus-visible, .cr-pick:focus-visible { outline: 2px solid theme('colors.accent'); outline-offset: 3px; }
+
+  /* Presentation viewer: 16:9 deck + chrome, capped by box width and viewport height */
+  .cr-frame {
+    width: 100%; border: 0;
+    height: min(calc((100vw - 32px) * .5625 + 96px), calc(1160px * .5625 + 96px), calc(100vh - 90px));
+  }
+  @supports (height: 100dvh) {
+    .cr-frame { height: min(calc((100vw - 32px) * .5625 + 96px), calc(1160px * .5625 + 96px), calc(100dvh - 90px)); }
+  }
 }
 
 /* Outside layers so it is always emitted even when not (yet) used in index.html. */

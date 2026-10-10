@@ -40,6 +40,7 @@ export const NavBar = () => {
   const isActive = (p) => withSlash(location.pathname) === p;
   const links = [
     { to: "/", label: "Home" },
+    { to: "/courses/", label: "Courses" },
     { to: "/about/", label: "About" },
     { to: "/contact/", label: "Contact" },
   ];
@@ -114,7 +115,7 @@ export const Footer = () => (
     <Shell className="py-10 md:py-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
       <div>
         <span className="font-serif italic text-lg text-ink block">Nadiia Nedorezova</span>
-        <span className="t-micro text-ink-3 mt-2 block">Leadership coaching · 1:1 only</span>
+        <span className="t-micro text-ink-3 mt-2 block">Leadership coaching and training</span>
       </div>
       <div className="flex flex-wrap items-center gap-6 md:gap-8">
         <Link to="/impressum/" className="t-micro text-ink-3 hover:text-ink transition-colors">Impressum</Link>

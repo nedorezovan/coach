@@ -25,6 +25,12 @@ const steps = [
   "Building a realistic strategy of growth",
 ];
 
+const trainings = [
+  { title: "The Leadership Initiation",                      detail: "For managers who are new in the role." },
+  { title: "The Manager's Transformation",                   detail: "For managers leading a team through reorganisation, redundancies or a project closure." },
+  { title: "Managing Burnout, Chronic Anxiety and Fatigue", detail: "For managers who need to tell tiredness from burnout and anxiety, in themselves and in their people." },
+];
+
 const cases = [
   {
     id: "01",
@@ -76,16 +82,21 @@ export const HomePage = () => {
         <Shell>
           <div className="grid grid-cols-12 gap-8 md:gap-12 items-center">
             <div className="col-span-12 lg:col-span-7">
-              <Eyebrow>Leadership Coaching</Eyebrow>
+              <Eyebrow>Leadership Coaching and Training</Eyebrow>
               <h1 className="font-serif t-display text-ink mb-8">
                 Grow <span className="italic">without burnout</span>
               </h1>
               <p className="t-body-lg text-ink-2 max-w-xl mb-10">
                 I work with leaders who are still performing — but already paying too high a price for it.
               </p>
-              <button onClick={() => navigate("/contact/")} className="btn btn-primary">
-                Discuss your situation
-              </button>
+              <div className="flex flex-wrap gap-4">
+                <button onClick={() => navigate("/contact/")} className="btn btn-primary">
+                  Discuss your situation
+                </button>
+                <button onClick={() => navigate("/courses/")} className="btn btn-ghost">
+                  Training for managers
+                </button>
+              </div>
             </div>
             <div className="col-span-12 lg:col-span-5">
               <div className="aspect-[4/5] overflow-hidden bg-paper-2">
@@ -183,7 +194,7 @@ export const HomePage = () => {
               <ol className="border-t border-rule">
                 {steps.map((s, i) => (
                   <li key={i} className="border-b border-rule py-5 flex gap-8 items-baseline">
-                    <span className="t-micro text-accent w-12 shrink-0">Step {["I", "II", "III"][i]}</span>
+                    <span className="t-micro text-accent w-20 shrink-0 whitespace-nowrap">Step {["I", "II", "III"][i]}</span>
                     <span className="t-body text-ink">{s}</span>
                   </li>
                 ))}
@@ -197,6 +208,37 @@ export const HomePage = () => {
               <p className="t-body text-ink-2">
                 Between sessions, you have direct decision support from me. When the pressure spikes, you have a thinking partner who understands the nuances of your world but remains unattached to the office politics.
               </p>
+            </div>
+          </div>
+        </Shell>
+      </section>
+
+      {/* Training for companies */}
+      <section className="border-t border-rule section bg-paper-2">
+        <Shell>
+          <div className="grid grid-cols-12 gap-8 md:gap-16 items-start">
+            <div className="col-span-12 lg:col-span-5">
+              <Eyebrow>Training for companies</Eyebrow>
+              <h2 className="t-title-1 text-ink font-medium mb-6">For the managers who carry the team.</h2>
+              <p className="t-body-lg text-ink-2 mb-10 max-w-md">
+                A request for a course on effectiveness in times of change often turns out to be a request for something else. We start from that conversation.
+              </p>
+              <button onClick={() => navigate("/courses/")} className="btn btn-primary">
+                See the courses
+              </button>
+            </div>
+            <div className="col-span-12 lg:col-span-7">
+              <ol className="border-t border-rule">
+                {trainings.map((t, i) => (
+                  <li key={i} className="border-b border-rule py-5 flex gap-8 items-baseline">
+                    <span className="t-micro text-accent w-8 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                    <div>
+                      <span className="t-body-lg text-ink block">{t.title}</span>
+                      <span className="t-body text-ink-2">{t.detail}</span>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
         </Shell>
