@@ -274,12 +274,9 @@ export const CoursesPage = () => {
           <div className="bg-paper w-full max-w-[1160px] flex flex-col" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center gap-4 px-4 py-2.5 border-b border-rule">
               <span className="t-label text-ink-3 min-w-0 truncate">{current.title}</span>
-              <div className="flex items-center gap-6 shrink-0">
-                <a href={coursePath(current.file + ".pdf")} download className="t-label text-accent">Download PDF</a>
-                <button type="button" onClick={close} aria-label="Close presentation" className="text-ink">
-                  <span className="material-symbols-outlined" aria-hidden="true">close</span>
-                </button>
-              </div>
+              <button type="button" onClick={close} aria-label="Close presentation" className="text-ink shrink-0">
+                <span className="material-symbols-outlined" aria-hidden="true">close</span>
+              </button>
             </div>
             <iframe
               key={current.file}
