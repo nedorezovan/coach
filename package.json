@@ -2,11 +2,19 @@
   "name": "coach",
   "private": true,
   "scripts": {
-    "build:css": "npx tailwindcss -c tailwind.config.js -i src/tailwind.css -o tailwind.css --minify"
+    "build": "npm run build:css && npm run build:js && npm run build:html",
+    "build:css": "npx tailwindcss -c tailwind.config.js -i src/tailwind.css -o tailwind.css --minify",
+    "build:js": "esbuild src/client.jsx --bundle --minify --jsx=automatic --format=iife --target=es2018 --define:process.env.NODE_ENV=\\\"production\\\" --outfile=assets/app.js",
+    "build:html": "node scripts/prerender.mjs",
+    "preview": "npm run build && node scripts/preview.mjs"
   },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1",
     "@tailwindcss/forms": "^0.5",
+    "esbuild": "^0.28.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.6",
     "tailwindcss": "^3"
   }
 }

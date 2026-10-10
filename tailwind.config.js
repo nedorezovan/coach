@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html"],
+  content: ["./src/**/*.{jsx,html}"],
   darkMode: "class",
   theme: {
     extend: {
@@ -17,6 +17,9 @@ module.exports = {
         // Lines
         rule: "rgba(17,17,17,0.12)",
         "rule-soft": "rgba(17,17,17,0.06)",
+        "rule-mid": "rgba(17,17,17,0.15)",
+        "rule-strong": "rgba(17,17,17,0.22)",
+        "rule-hover": "rgba(17,17,17,0.5)",
         // Accent
         accent: "#1565d9",
         "accent-hover": "#0f4cb8",
